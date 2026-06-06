@@ -49,6 +49,18 @@ nav a {
     background-repeat: repeat;
     padding: 20px;
 }
+
+.photo-frame {
+    background-image: url("images/background.jpg");
+    background-repeat: repeat;
+    padding: 20px;
+    display: inline-block;
+}
+
+.photo-frame img {
+    display: block;
+}
+
 #cv {
     max-width: 900px;
     margin: 60px auto;
