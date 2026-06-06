@@ -26,6 +26,13 @@ nav a {
   width: 300px;
 }
 
+.hero .right {
+    background-image: url("images/background.jpg");
+    background-repeat: repeat;
+    padding: 20px;
+    display: inline-block;
+}
+
 .feature {
   display: flex;
   gap: 40px;
@@ -34,6 +41,13 @@ nav a {
 
 .feature img {
   width: 300px;
+}
+
+
+.feature > img {
+    background-image: url("images/background.jpg");
+    background-repeat: repeat;
+    padding: 20px;
 }
 #cv {
     max-width: 900px;
