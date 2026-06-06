@@ -48,14 +48,26 @@ nav a {
 }
 
 .photo-frame {
+    position: relative;              /* Allows us to offset the image relative to this frame */
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    padding: 20px;
+    width: 300px;                    /* Matches your image width */
+    height: 380px;                   /* Adjust this height to match your photo's aspect ratio */
     display: inline-block;
 }
 
 .photo-frame img {
-    display: block;
+    position: absolute;
+    width: 100%;                     /* Makes the image fill the width of the frame container */
+    height: 100%;                    /* Makes the image fill the height */
+    object-fit: cover;               /* Prevents the image from stretching distortion */
+    
+    /* The Offset Trick */
+    top: -15px;                      /* Moves the image UP, exposing the frame at the bottom */
+    left: -15px;                     /* Moves the image LEFT, exposing the frame on the right */
+    
+    /* Optional: Matches the subtle dark border/shadow around the photo in the mockup */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 #cv {
