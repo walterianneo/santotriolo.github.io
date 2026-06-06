@@ -35,3 +35,35 @@ nav a {
 .feature img {
   width: 300px;
 }
+#cv {
+    max-width: 900px;
+    margin: 60px auto;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#cv h3 {
+    text-decoration: underline;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.cv-item {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.cv-date {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.cv-text {
+    flex: 1;
+}
