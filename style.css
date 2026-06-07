@@ -216,3 +216,15 @@ nav a {
 .explore-btn:hover {
     transform: scale(1.05);
 }
+/* Turns the left book container into a column so the button sits centered below the text */
+.book-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Tells the new book button to center itself perfectly under the paragraph text */
+.book-btn {
+    align-self: center;
+    margin-top: 30px; /* Gives it the exact same vertical spacing as the lecture button */
+}
