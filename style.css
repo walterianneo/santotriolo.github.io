@@ -15,8 +15,30 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px; /* 🚀 Squeezes the header text inward from both edges */
+  padding: 0 40px; 
 }
+
+/* 🚀 Restricts the title width so the navigation menu has room to sit in a single row */
+header h1 {
+  max-width: 350px; 
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* 🚀 Shrinks the PhD and ABAP letters and knocks them down nicely */
+header .credentials {
+  font-size: 0.7em; /* Makes it smaller than the main name text */
+  display: inline-block;
+  font-weight: normal;
+}
+
+/* 🚀 Ensures your nav links stay in a single horizontal row */
+nav {
+  display: flex;
+  gap: 15px; /* Adds clean spacing between Vita, Lectures, and Contact */
+  white-space: nowrap; /* Prevents the links from stacking vertically */
+}
+
 
 
 
