@@ -52,7 +52,7 @@ nav a {
     background-repeat: repeat;
     
     /* Make this number bigger or smaller to change the overall size! */
-    width: 450px; 
+    width: 380px; 
 
   /* ADD THIS LINE to defeat the Flexbox squishing */
     flex-shrink: 0;
