@@ -49,46 +49,56 @@ nav a {
 }
 
 /* ==========================================================================
-   1. SHARED FRAME STYLES (Applies the offset trick to both)
+   1. SHARED BASE STYLES
    ========================================================================== */
 .photo-frame {
     position: relative;
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    padding: 20px;
     display: inline-block;
     box-sizing: border-box;
+    /* Removed global padding so we can control it independently below */
 }
 
 .photo-frame img {
     display: block;
-    width: 100%;           /* Tells the image to match the container width */
+    width: 100%;           
     height: auto;          
     position: relative;    
-    top: -15px;            
-    left: -15px;           
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* ==========================================================================
-   2. INDEPENDENT CONTROLS (Tweak these numbers freely)
-   ========================================================================== */
-
-/* CONTROL THE TOP HERO PIC HERE */
-.hero .photo-frame {
-    width: 300px;          /* Shrinks the top container back down to 300px */
-}
-
-/* CONTROL THE BOTTOM LECTURE PIC HERE */
-.feature .photo-frame {
-    width: 340px;          /* Keeps your bottom image exactly at its great size */
-    flex-shrink: 0;        /* Prevents flexbox from changing this size */
-}
-
-/* Remove any lingering width locks on generic raw images */
+/* Clear lingering browser constraints */
 .hero img, .feature img, .feature > img {
     width: 100% !important;
     height: auto !important;
+}
+
+/* ==========================================================================
+   2. CUSTOM TOP HERO PIC (Background exposed on Bottom/Right)
+   ========================================================================== */
+.hero .photo-frame {
+    width: 300px;          
+    padding: 35px;         /* Larger background border size per your mockup */
+}
+
+.hero .photo-frame img {
+    top: -20px;            /* Shifts UP */
+    left: -20px;           /* Shifts LEFT */
+}
+
+/* ==========================================================================
+   3. CUSTOM BOTTOM FEATURE PIC (Background exposed on Bottom/Left)
+   ========================================================================== */
+.feature .photo-frame {
+    width: 340px;          
+    padding: 20px;         /* Standard frame thickness */
+    flex-shrink: 0;        
+}
+
+.feature .photo-frame img {
+    top: -15px;            /* Shifts UP */
+    left: 15px;            /* FIXED: Shifts RIGHT (positive value moves it right!) */
 }
 #cv {
     max-width: 900px;
