@@ -53,6 +53,9 @@ nav a {
     
     /* Make this number bigger or smaller to change the overall size! */
     width: 450px; 
+
+  /* ADD THIS LINE to defeat the Flexbox squishing */
+    flex-shrink: 0;
     
     padding: 20px;
     display: inline-block;
