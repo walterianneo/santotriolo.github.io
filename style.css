@@ -52,16 +52,18 @@ nav a {
    1. SHARED BASE STYLES & TRANSPARENCY CONTROL
    ========================================================================== */
 .photo-frame {
-    position: relative;
+    /* CRITICAL: Keeps the container alive as an anchor layer */
+    position: relative; 
     display: inline-block;
     box-sizing: border-box;
-    /* We remove the background image from here directly */
 }
 
 /* This is the magic layer that lets us change background opacity safely */
 .photo-frame::before {
     content: "";
     position: absolute;
+    
+    /* Forces the background layer to snap to all 4 edges of the padding box */
     top: 0;
     left: 0;
     right: 0;
@@ -71,10 +73,10 @@ nav a {
     background-repeat: repeat;
     
     /* --- CONTROL TRANSPARENCY HERE --- */
-    /* 1.0 is fully solid, 0.0 is completely invisible. Try 0.4 or 0.6! */
     opacity: 0.5; 
     
-    z-index: 1; /* Sits cleanly behind the photo image */
+    /* CRITICAL: Forces it to stay firmly tucked behind the photo element */
+    z-index: -1; 
 }
 
 .photo-frame img {
@@ -83,7 +85,7 @@ nav a {
     height: auto;          
     position: relative;    
     
-    /* Kept at z-index: 2 so it stays perfectly crisp on top of the faded background */
+    /* Keeps the photo crisp and interactive on top */
     z-index: 2;            
     
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25); 
@@ -120,9 +122,9 @@ nav a {
 .feature .photo-frame img {
     top: -50px;            
     left: 50px;            
-} 
-  
-}#cv {
+}
+
+#cv {
     max-width: 900px;
     margin: 60px auto;
     font-family: Georgia, serif;
