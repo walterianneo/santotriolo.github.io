@@ -215,3 +215,34 @@ nav a {
    padding-right: 40px; 
 }
 
+/* 🚀 1. Matches the width of the blue box by squeezing the text container inward */
+.feature .right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;   /* Squeezes the left side of the blue box block */
+    padding-right: 60px;  /* Squeezes the right side of the blue box block */
+    box-sizing: border-box;
+}
+
+/* 🚀 2. Centers the button inside that specific blue box width and doubles its size */
+.explore-btn {
+    align-self: center;       /* Centers it precisely under the text block */
+    margin-top: 30px;         /* Adds breathing room between the paragraph and button */
+    
+    /* Doubles the button footprint and text scale */
+    font-size: 1.6rem;         
+    padding: 12px 28px;       
+    
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #d1cbbf; /* Keeps your great vintage-tan palette feel */
+    color: #333;
+    border-radius: 20px;      /* Matches your current pill-shape styling */
+    transition: transform 0.2s ease;
+}
+
+/* Optional interactive hover pop effect */
+.explore-btn:hover {
+    transform: scale(1.05);
+}
