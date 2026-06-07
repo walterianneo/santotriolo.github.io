@@ -2,10 +2,12 @@ body {
     max-width: 1000px;
     margin: auto;
     font-family: Georgia, serif;
+    font-size: 150%; /* 👈 THIS WILL MAKE ALL BASE FONTS 50% BIGGER */
     
     /* CHANGE THIS LINE */
     background-color: #e9e2d5; /* A perfect warm, vintage-tan mockup match */
 }
+
 
 header {
   display: flex;
