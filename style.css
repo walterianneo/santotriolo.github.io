@@ -161,17 +161,16 @@ nav a {
 }
 
 .tropical-divider {
-    width: 100%;                  /* Stretches completely across its layout column */
-    height: 60px;                 /* Matches the height of the subtle leaf graphics */
+    display: block !important;    /* Forces it to behave as a full row block */
+    clear: both;                  /* Prevents wrapped text or elements from crushing it */
+    width: 100%;                  
+    height: 60px !important;      /* Overrides any global layout restrictions */
     
-    background-image: url("images/Divider.png");
-    background-repeat: repeat-x;  /* Tiles horizontally ONLY, never vertically */
-    background-position: center;  /* Keeps the pattern aligned gracefully */
-    background-size: auto 100%;   /* Forces the image height to scale cleanly into the 60px box */
+    background-image: url("images/divider.jpg");
+    background-repeat: repeat-x !important;
+    background-position: center;  
+    background-size: auto 100%;   
     
-    /* Spacing: Adds breath room above and below the line */
     margin-top: 40px;
     margin-bottom: 40px;
-    
-    border: none;                 /* Clears any old native horizontal rule borders if necessary */
 }
