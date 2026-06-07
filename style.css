@@ -42,33 +42,34 @@ nav a {
 
 
 .feature > img {
-    background-image: url("images/background.jpg");
-    background-repeat: repeat;
-  
-    padding: 20px;
+    width: unset !important;
+    height: auto;
 }
 
 .photo-frame {
-    position: relative;
+   position: relative;
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    width: 340px;          /* Sets the solid baseline width */
+    
+    /* Make this number bigger or smaller to change the overall size! */
+    width: 380px; 
+    
     padding: 20px;
     display: inline-block;
+    box-sizing: border-box; /* Ensures padding doesn't distort the width calculation */
 }
 
 .photo-frame img {
    display: block;
-    width: 100%;           /* Fills the 340px container width */
-    height: auto;          /* Keeps the photo from distorting */
+    width: 100%;           
+    height: auto;          
     
-    /* The Offset Trick */
     position: relative;    
     top: -15px;            
     left: -15px;           
     
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-
+}
 #cv {
     max-width: 900px;
     margin: 60px auto;
