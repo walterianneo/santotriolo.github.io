@@ -44,15 +44,19 @@ nav a {
 .feature > img {
     background-image: url("images/background.jpg");
     background-repeat: repeat;
+  
     padding: 20px;
 }
 
 .photo-frame {
-    position: relative;              /* Allows us to offset the image relative to this frame */
+    position: relative;
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    width: 300px;                    /* Matches your image width */
-    height: 380px;                   /* Adjust this height to match your photo's aspect ratio */
+    
+    /* ADD THIS LINE */
+    width: 300px; /* Forces the frame to stay 300px wide, even if the image floats absolutely */
+    
+    padding: 20px;
     display: inline-block;
 }
 
