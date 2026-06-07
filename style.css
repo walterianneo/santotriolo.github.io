@@ -133,7 +133,7 @@ nav a {
     max-width: 900px;
     margin: 60px auto;
     font-family: Georgia, serif;
-    font-size: 14px;
+    font-size: 21px; /* 🚀 Exactly 50% larger than your original 14px */
     line-height: 1.5;
 }
 
@@ -144,10 +144,11 @@ nav a {
 
 #cv h3 {
     text-decoration: underline;
-    font-size: 16px;
+    font-size: 24px; /* 🚀 Exactly 50% larger than your original 16px */
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
 .cv-item {
     display: flex;
     margin-bottom: 18px;
