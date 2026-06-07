@@ -216,15 +216,51 @@ nav a {
 .explore-btn:hover {
     transform: scale(1.05);
 }
-/* Turns the left book container into a column so the button sits centered below the text */
-.book-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* ==========================================================================
+   6. NEW BOOK FEATURE ROW LAYOUT (FIXED)
+   ========================================================================== */
+.book-feature {
+    display: flex;         /* Forces the text column and image to sit side-by-side */
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    align-items: center;   /* Perfectly centers the columns vertically */
 }
 
-/* Tells the new book button to center itself perfectly under the paragraph text */
+/* Controls the text block on the left side */
+.book-text-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stacks paragraph, then button underneath */
+    justify-content: center;
+    padding-left: 40px;     /* Aligns with your hero design padding */
+    padding-right: 20px;  
+    box-sizing: border-box;
+}
+
+.book-text-column p {
+    font-family: Georgia, serif;
+    font-size: 1.15rem;   
+    line-height: 1.5;
+    color: #333333;
+    margin: 0;
+}
+
+/* Positions the button inside the text column bounds */
 .book-btn {
-    align-self: center;
-    margin-top: 30px; /* Gives it the exact same vertical spacing as the lecture button */
+    align-self: center;     /* Centers button cleanly under the text row */
+    margin-top: 30px;         
+}
+
+/* Forces the frame container on the right to align with your theme layouts */
+.book-feature .book-frame {
+    width: 340px;         
+    padding: 20px;        
+    flex-shrink: 0;       
+}
+
+/* Controls the custom offset displacement on the image */
+.book-feature .book-frame img {
+    top: -30px;           
+    left: -30px;          
 }
