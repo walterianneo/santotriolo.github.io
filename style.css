@@ -23,7 +23,8 @@ nav a {
 }
 
 .hero img {
- 
+ width: unset !important;
+ height: auto !important;
 }
 
 .hero .right {
@@ -37,42 +38,50 @@ nav a {
 }
 
 .feature img {
-
+ width: unset !important;
+ height: auto !important;
 }
 
 
 .feature > img {
-    width: unset !important;
-    height: auto;
+ width: unset !important;
+ height: auto !important;
 }
 
 .photo-frame {
-   position: relative;
+    position: relative;
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    
-    /* Make this number bigger or smaller to change the overall size! */
-    width: 380px; 
-
-  /* ADD THIS LINE to defeat the Flexbox squishing */
-   /* flex-shrink: 0;
-    
     padding: 20px;
     display: inline-block;
-    box-sizing: border-box; /* Ensures padding doesn't distort the width calculation */
+    box-sizing: border-box;
 }
 
 .photo-frame img {
-   display: block;
+    display: block;
     width: 100%;           
     height: auto;          
-    
     position: relative;    
     top: -15px;            
     left: -15px;           
-    
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* ==========================================================================
+   INDEPENDENT SIZING CONTROLS (Change these numbers freely!)
+   ========================================================================== */
+
+/* Change the top right image size here */
+.top-frame {
+    width: 380px; 
+}
+
+/* Change the bottom left image size here */
+.bottom-frame {
+    width: 450px; 
+    flex-shrink: 0; /* Prevents the layout container from crushing it */
+}
+
 #cv {
     max-width: 900px;
     margin: 60px auto;
