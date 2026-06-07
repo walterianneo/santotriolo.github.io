@@ -52,22 +52,22 @@ nav a {
     position: relative;
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    width: 300px;          /* Sets the solid baseline width */
+    width: 340px;          /* Sets the solid baseline width */
+    padding: 20px;
     display: inline-block;
 }
 
 .photo-frame img {
-    display: block;
-    width: 100%;           /* Fills the 300px frame width completely */
-    height: auto;          /* Respects the natural proportions of the photo */
+   display: block;
+    width: 100%;           /* Fills the 340px container width */
+    height: auto;          /* Keeps the photo from distorting */
     
     /* The Offset Trick */
-    position: relative;    /* CHANGED from absolute to relative */
-    top: -15px;            /* Shifts it up */
-    left: -15px;           /* Shifts it left */
+    position: relative;    
+    top: -15px;            
+    left: -15px;           
     
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
 
 #cv {
     max-width: 900px;
