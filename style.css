@@ -48,6 +48,9 @@ nav a {
  height: auto !important;
 }
 
+/* ==========================================================================
+   1. SHARED FRAME STYLES (Applies the offset trick to both)
+   ========================================================================== */
 .photo-frame {
     position: relative;
     background-image: url("images/background.jpg");
@@ -59,7 +62,7 @@ nav a {
 
 .photo-frame img {
     display: block;
-    width: 100%;           
+    width: 100%;           /* Tells the image to match the container width */
     height: auto;          
     position: relative;    
     top: -15px;            
@@ -68,20 +71,25 @@ nav a {
 }
 
 /* ==========================================================================
-   INDEPENDENT SIZING CONTROLS (Change these numbers freely!)
+   2. INDEPENDENT CONTROLS (Tweak these numbers freely)
    ========================================================================== */
 
-/* Change the top right image size here */
-.top-frame {
-    width: 300px; 
+/* CONTROL THE TOP HERO PIC HERE */
+.hero .photo-frame {
+    width: 300px;          /* Shrinks the top container back down to 300px */
 }
 
-/* Change the bottom left image size here */
-.bottom-frame {
-    width: 450px; 
-    flex-shrink: 0; /* Prevents the layout container from crushing it */
+/* CONTROL THE BOTTOM LECTURE PIC HERE */
+.feature .photo-frame {
+    width: 340px;          /* Keeps your bottom image exactly at its great size */
+    flex-shrink: 0;        /* Prevents flexbox from changing this size */
 }
 
+/* Remove any lingering width locks on generic raw images */
+.hero img, .feature img, .feature > img {
+    width: 100% !important;
+    height: auto !important;
+}
 #cv {
     max-width: 900px;
     margin: 60px auto;
