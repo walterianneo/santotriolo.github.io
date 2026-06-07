@@ -55,7 +55,7 @@ nav a {
     width: 380px; 
 
   /* ADD THIS LINE to defeat the Flexbox squishing */
-    flex-shrink: 0;
+   /* flex-shrink: 0;
     
     padding: 20px;
     display: inline-block;
