@@ -9,6 +9,9 @@ body {
     background-color: #e9e2d5; /* A perfect warm, vintage-tan mockup match */
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 header {
