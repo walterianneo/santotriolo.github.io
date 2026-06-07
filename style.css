@@ -1,18 +1,15 @@
-body {
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 30px; /* 🚀 THIS ADDS BREAKING ROOM TO THE LEFT & RIGHT EDGES */
-    font-family: Georgia, serif;
-    font-size: 150%; 
-    
-    /* CHANGE THIS LINE */
-    background-color: #e9e2d5; /* A perfect warm, vintage-tan mockup match */
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+body {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 30px; 
+    font-family: Georgia, serif;
+    font-size: 150%; 
+    background-color: #e9e2d5; /* ✅ Lowercase 'body' fixed */
+}
 
 header {
   display: flex;
@@ -21,29 +18,26 @@ header {
   padding: 0 40px; 
 }
 
-/* 🚀 Restricts the title width so the navigation menu has room to sit in a single row */
+/* Restricts the title width so the navigation menu has room to sit in a single row */
 header h1 {
   max-width: 350px; 
   margin: 0;
   line-height: 1.2;
 }
 
-/* 🚀 Shrinks the PhD and ABAP letters and knocks them down nicely */
+/* Shrinks the PhD and ABAP letters and knocks them down nicely */
 header .credentials {
-  font-size: 0.7em; /* Makes it smaller than the main name text */
+  font-size: 0.7em; 
   display: inline-block;
   font-weight: normal;
 }
 
-/* 🚀 Ensures your nav links stay in a single horizontal row */
+/* Ensures your nav links stay in a single horizontal row */
 nav {
   display: flex;
-  gap: 15px; /* Adds clean spacing between Vita, Lectures, and Contact */
-  white-space: nowrap; /* Prevents the links from stacking vertically */
+  gap: 15px; 
+  white-space: nowrap; 
 }
-
-
-
 
 nav a {
   padding: 10px;
@@ -63,6 +57,7 @@ nav a {
 
 .hero .right {
    display: inline-block;
+   padding-right: 40px;
 }
 
 .feature {
@@ -71,45 +66,31 @@ nav a {
   margin-top: 60px;
 }
 
-.feature img {
- width: unset !important;
- height: auto !important;
-}
-
-
-.feature > img {
- width: unset !important;
- height: auto !important;
+/* Clear lingering browser constraints */
+.hero img, .feature img, .feature > img {
+    width: 100% !important;
+    height: auto !important;
 }
 
 /* ==========================================================================
    1. SHARED BASE STYLES & TRANSPARENCY CONTROL
    ========================================================================== */
 .photo-frame {
-    /* CRITICAL: Keeps the container alive as an anchor layer */
     position: relative; 
     display: inline-block;
     box-sizing: border-box;
 }
 
-/* This is the magic layer that lets us change background opacity safely */
 .photo-frame::before {
     content: "";
     position: absolute;
-    
-    /* Forces the background layer to snap to all 4 edges of the padding box */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    
-    /* --- CONTROL TRANSPARENCY HERE --- */
     opacity: 0.5; 
-    
-    /* CRITICAL: Forces it to stay firmly tucked behind the photo element */
     z-index: -1; 
 }
 
@@ -118,17 +99,8 @@ nav a {
     width: 100%;           
     height: auto;          
     position: relative;    
-    
-    /* Keeps the photo crisp and interactive on top */
     z-index: 2;            
-    
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25); 
-}
-
-/* Clear lingering browser constraints */
-.hero img, .feature img, .feature > img {
-    width: 100% !important;
-    height: auto !important;
 }
 
 /* ==========================================================================
@@ -158,11 +130,14 @@ nav a {
     left: 50px;            
 }
 
+/* ==========================================================================
+   4. CURRICULUM VITAE STYLES
+   ========================================================================== */
 #cv {
     max-width: 900px;
     margin: 60px auto;
     font-family: Georgia, serif;
-    font-size: 28px; /* 🚀 Exactly 50% larger than your original 14px */
+    font-size: 21px; 
     line-height: 1.5;
 }
 
@@ -173,7 +148,7 @@ nav a {
 
 #cv h3 {
     text-decoration: underline;
-    font-size: 32px; /* 🚀 Exactly 50% larger than your original 16px */
+    font-size: 24px; 
     margin-top: 40px;
     margin-bottom: 20px;
 }
@@ -199,50 +174,45 @@ nav a {
     height: 60px !important;
     margin-top: 40px !important;
     margin-bottom: 40px !important;
-    
-    /* Forces GitHub to point directly to the exact location you just verified */
     background-image: url("/santotriolo.github.io/images/divider.jpg") !important; 
-    
     background-repeat: repeat-x !important;
     background-position: center !important;
     background-size: auto 100% !important;
 }
+
+/* ==========================================================================
+   5. MARGIN, COLUMN WRAPPING & BUTTON CENTERING ADJUSTMENTS
+   ========================================================================== */
 .hero > div:first-child {
-  padding-left: 40px; /* Pushes left side text away from the screen edge */
-}
-.hero .right, .feature .right {
-   display: inline-block;
-   padding-right: 40px; 
+  padding-left: 40px; 
 }
 
-/* 🚀 1. Matches the width of the blue box by squeezing the text container inward */
+/* ✅ Cleaned and consolidated: This aligns your text block column and limits width */
 .feature .right {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;   /* Squeezes the left side of the blue box block */
-    padding-right: 60px;  /* Squeezes the right side of the blue box block */
+    justify-content: center; 
+    padding-left: 20px;   
+    padding-right: 60px;  
     box-sizing: border-box;
 }
 
-/* 🚀 2. Centers the button inside that specific blue box width and doubles its size */
+/* ✅ Centers the button link precisely within your right text column */
 .explore-btn {
-    align-self: center;       /* Centers it precisely under the text block */
-    margin-top: 30px;         /* Adds breathing room between the paragraph and button */
-    
-    /* Doubles the button footprint and text scale */
+    align-self: center;       
+    margin-top: 30px;         
     font-size: 1.6rem;         
     padding: 12px 28px;       
-    
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    background-color: #d1cbbf; /* Keeps your great vintage-tan palette feel */
+    background-color: #d1cbbf; 
     color: #333;
-    border-radius: 20px;      /* Matches your current pill-shape styling */
+    border-radius: 20px;      
     transition: transform 0.2s ease;
+    width: max-content;       
 }
 
-/* Optional interactive hover pop effect */
 .explore-btn:hover {
     transform: scale(1.05);
 }
