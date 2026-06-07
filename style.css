@@ -1,8 +1,10 @@
 body {
-  max-width: 1000px;
-  margin: auto;
-  font-family: Georgia, serif;
-  background: #f8f6f3;
+    max-width: 1000px;
+    margin: auto;
+    font-family: Georgia, serif;
+    
+    /* CHANGE THIS LINE */
+    background-color: #e9e2d5; /* A perfect warm, vintage-tan mockup match */
 }
 
 header {
