@@ -283,7 +283,7 @@ nav a {
 .right p, 
 .book-text-column p {
     text-align: left !important;
-    font-size: 1.5rem !important;   /* Increased to scale perfectly with your CV layout */
+    font-size: 2.0rem !important;   /* Increased to scale perfectly with your CV layout */
     line-height: 1.6 !important;     /* Keeps the spacing between lines beautifully readable */
     color: #1a1a1a !important;       /* Maintains the clean, dark gray tone */
 }
