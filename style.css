@@ -285,7 +285,7 @@ nav a {
 .feature .right p, 
 .book-feature .book-text-column p {
     text-align: left !important;
-    font-size: 30px !important;    /* Matches the exact '21px' font-size of your #cv container */
+    font-size: 34px !important;    /* Matches the exact '21px' font-size of your #cv container */
     line-height: 1.6 !important;   
     color: #1a1a1a !important;     
 }
