@@ -280,50 +280,51 @@ nav a {
     /* Standardizes the text color to a crisp, deep charcoal */
     color: #1a1a1a !important;
 } 
-/* ... all of your other CSS styles are up here ... */
-
 /* ==========================================================================
-   7. GLOBAL SECTION FONTS AND TEXT SIZING
+   7. GLOBAL SECTION FONTS AND TEXT SIZING (FIXED HEADLINE)
    ========================================================================== */
-/* Targets the headlinesb and paragraphs in both the lecture and book sections */
-.right h2,
+/* Targets ONLY the paragraph descriptions in both sections to match clean sizing */
 .right p, 
-.book-text-column h2,
 .book-text-column p {
     text-align: left !important;
-    font-size: 1.6rem !important;  /* 🚀 Controls text scale cleanly (Try 1.15rem to 1.5rem) */
-    line-height: 1.5 !important;   
+    font-size: 1.15rem !important;  /* Keeps description body matching your crisp font scale */
+    line-height: 1.6 !important;   
     color: #1a1a1a !important;     
 }
 
-/* Optional: If you want your headlines to stay slightly bolder/larger than paragraphs */
+/* Restores your section titles to match your top hero title styling naturally */
 .right h2, 
 .book-text-column h2 {
-    font-size: 1.6rem !important;
-    margin-bottom: 15px !important;
+    text-align: left !important;
+    font-size: 1.5rem !important;   /* Matches the clean weight of your top header */
+    font-weight: bold !important;
+    line-height: 1.3 !important;
+    color: #000000 !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
 }
+
 /* ==========================================================================
    8. SIDE-BY-SIDE BUTTON ROW ALIGNMENT
    ========================================================================== */
 /* Wraps the two buttons into a perfectly centered horizontal row */
 .button-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Horizontally centers the pair together */
-    align-items: center;
-    gap: 20px;               /* Adds clean spacing between the two buttons */
-    margin-top: 30px;        /* Spacing below the paragraph text */
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important; 
+    align-items: center !important;
+    gap: 20px !important;               
+    margin-top: 30px !important;        
+    width: 100% !important;
 }
 
 /* Overrides the individual centering rules so they align to the row instead */
 .button-row .explore-btn {
     align-self: auto !important; 
-    margin-top: 0 !important;   /* Uses the row's gap and margin settings instead */
+    margin-top: 0 !important;   
 }
 
-/* Optional: Gives the "Other Lectures" button a subtle unique style if you want it to look secondary */
+/* Gives the "Other Lectures" button a subtle unique style if you want it to look secondary */
 .secondary-btn {
-    background-color: #c4bdae !important; /* Slightly deeper vintage tone to differentiate it */
+    background-color: #c4bdae !important; 
 }
-
