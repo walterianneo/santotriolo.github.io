@@ -281,11 +281,23 @@ nav a {
 }
 /* ... all of your other CSS styles are up here ... */
 
-/* Forces both the lecture and book description text to match your desired layout scale. Default 1.15 */
+/* ==========================================================================
+   7. GLOBAL SECTION FONTS AND TEXT SIZING
+   ========================================================================== */
+/* Targets the headlines and paragraphs in both the lecture and book sections */
+.right h2,
 .right p, 
+.book-text-column h2,
 .book-text-column p {
     text-align: left !important;
-    font-size: 3.15rem !important; /* 💡 Change this value to adjust your font size! */
-    line-height: 1.6 !important;   
+    font-size: 1.3rem !important;  /* 🚀 Controls text scale cleanly (Try 1.15rem to 1.5rem) */
+    line-height: 1.5 !important;   
     color: #1a1a1a !important;     
+}
+
+/* Optional: If you want your headlines to stay slightly bolder/larger than paragraphs */
+.right h2, 
+.book-text-column h2 {
+    font-size: 1.6rem !important;  
+    margin-bottom: 15px !important;
 }
