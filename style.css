@@ -299,7 +299,7 @@ nav a {
 /* Optional: If you want your headlines to stay slightly bolder/larger than paragraphs */
 .right h2, 
 .book-text-column h2 {
-    font-size: 2.2rem !important;
+    font-size: 1.6rem !important;
     margin-bottom: 15px !important;
 }
 /* ==========================================================================
