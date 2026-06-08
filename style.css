@@ -281,11 +281,11 @@ nav a {
 }
 /* ... all of your other CSS styles are up here ... */
 
-/* Forces both the lecture and book description text to match the larger CV font scale */
-.feature .right p, 
-.book-feature .book-text-column p {
+/* Forces both the lecture and book description text to match your desired layout scale */
+.right p, 
+.book-text-column p {
     text-align: left !important;
-    font-size: 6px !important;    /* Matches the exact '21px' font-size of your #cv container */
+    font-size: 1.15rem !important; /* 💡 Change this value to adjust your font size! */
     line-height: 1.6 !important;   
     color: #1a1a1a !important;     
 }
