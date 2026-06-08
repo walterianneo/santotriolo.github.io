@@ -264,3 +264,18 @@ nav a {
     top: -30px;           
     left: -30px;          
 }
+
+
+.feature-text {
+    /* Aligns text cleanly to the left and removes the irregular word gaps */
+    text-align: left !important; 
+    
+    /* Matches the exact font scale between both text blocks */
+    font-size: 1.15rem !important; 
+    
+    /* Provides professional line height for readable paragraphs */
+    line-height: 1.6 !important; 
+    
+    /* Standardizes the text color to a crisp, deep charcoal */
+    color: #1a1a1a !important;
+}
