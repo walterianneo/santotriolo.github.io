@@ -291,7 +291,7 @@ nav a {
 .book-text-column h2,
 .book-text-column p {
     text-align: left !important;
-    font-size: 1.15rem !important;  /* 🚀 Controls text scale cleanly (Try 1.15rem to 1.5rem) *
+    font-size: 1.4rem !important;  /* 🚀 Controls text scale cleanly (Try 1.15rem to 1.5rem) *
     line-height: 1.5 !important;   
     color: #1a1a1a !important;     
 }
@@ -299,6 +299,6 @@ nav a {
 /* Optional: If you want your headlines to stay slightly bolder/larger than paragraphs */
 .right h2, 
 .book-text-column h2 {
-    font-size: 1.6rem !important;  
+    font-size: 2.0rem !important; 
     margin-bottom: 15px !important;
 }
