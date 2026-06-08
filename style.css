@@ -279,12 +279,11 @@ nav a {
     /* Standardizes the text color to a crisp, deep charcoal */
     color: #1a1a1a !important;
 }
-/* Forces both the lecture paragraph and the book paragraph to match the larger CV font size */
+/* Forces both the lecture and book description text to match the larger CV font scale */
 .right p, 
 .book-text-column p {
     text-align: left !important;
-    font-size: 1.25rem !important;  /* Bumps the text up to match the larger CV scale */
-    line-height: 1.6 !important;     /* Ensures healthy breathing room between lines */
-    color: #1a1a1a !important;       /* Matches the deep charcoal font color */
+    font-size: 1.5rem !important;   /* Increased to scale perfectly with your CV layout */
+    line-height: 1.6 !important;     /* Keeps the spacing between lines beautifully readable */
+    color: #1a1a1a !important;       /* Maintains the clean, dark gray tone */
 }
-
