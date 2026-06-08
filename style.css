@@ -11,7 +11,7 @@ body {
     background-color: #e9e2d5; /* ✅ Lowercase 'body' fixed */
 }
 
-header {t
+header {
         
   display: flex;
   justify-content: space-between;
