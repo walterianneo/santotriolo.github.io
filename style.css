@@ -302,3 +302,28 @@ nav a {
     font-size: 4.2rem !important;
     margin-bottom: 15px !important;
 }
+/* ==========================================================================
+   8. SIDE-BY-SIDE BUTTON ROW ALIGNMENT
+   ========================================================================== */
+/* Wraps the two buttons into a perfectly centered horizontal row */
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Horizontally centers the pair together */
+    align-items: center;
+    gap: 20px;               /* Adds clean spacing between the two buttons */
+    margin-top: 30px;        /* Spacing below the paragraph text */
+    width: 100%;
+}
+
+/* Overrides the individual centering rules so they align to the row instead */
+.button-row .explore-btn {
+    align-self: auto !important; 
+    margin-top: 0 !important;   /* Uses the row's gap and margin settings instead */
+}
+
+/* Optional: Gives the "Other Lectures" button a subtle unique style if you want it to look secondary */
+.secondary-btn {
+    background-color: #c4bdae !important; /* Slightly deeper vintage tone to differentiate it */
+}
+
