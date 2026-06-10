@@ -91,7 +91,7 @@ nav a {
     bottom: 0;
     background-image: url("images/Newby.jpg");
     background-repeat: repeat;
-    opacity: 0.7; 
+    opacity: 1.0; 
     z-index: -1; 
 }
 
