@@ -91,7 +91,7 @@ nav a {
     bottom: 0;
     background-image: url("images/NewerBG.PNG");
     background-repeat: repeat;
-    opacity: 0.3; 
+    opacity: 0.1; 
     z-index: -1; 
 }
 
