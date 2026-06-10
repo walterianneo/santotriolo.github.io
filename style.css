@@ -91,7 +91,7 @@ nav a {
     bottom: 0;
     background-image: url("images/background.jpg");
     background-repeat: repeat;
-    opacity: 0.5; 
+    opacity: 0.8; 
     z-index: -1; 
 }
 
